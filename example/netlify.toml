@@ -1,0 +1,18 @@
+[build]
+  command = "pnpm run build"
+  publish = "apps/shell/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  VITE_DASHBOARD_URL = "https://unique-blini-3b08f3.netlify.app"
+  VITE_PROFILE_URL = "https://dapper-fenglisu-032859.netlify.app"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

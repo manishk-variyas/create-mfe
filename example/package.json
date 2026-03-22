@@ -1,0 +1,20 @@
+{
+  "name": "full-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:remotes": "pnpm --filter './apps/!(*shell)' --parallel run dev",
+    "dev:shell": "pnpm --filter @full-monorepo/shell run dev",
+    "serve": "pnpm --filter './apps/*' --parallel run serve",
+    "serve:remotes": "pnpm --filter './apps/!(*shell)' --parallel run serve",
+    "build": "pnpm -r run build",
+    "build:packages": "pnpm --filter \"./packages/**\" run build",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "dev:api": "pnpm --filter @full-monorepo/api run dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

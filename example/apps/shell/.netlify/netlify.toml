@@ -1,0 +1,48 @@
+headersOrigin = "config"
+redirectsOrigin = "config"
+plugins = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/pablo/Downloads/mfe-cli/example/apps/shell/apps/shell/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "pnpm run build"
+
+[build.environment]
+NODE_VERSION = "20"
+VITE_DASHBOARD_URL = "https://unique-blini-3b08f3.netlify.app"
+VITE_PROFILE_URL = "https://dapper-fenglisu-032859.netlify.app"
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
